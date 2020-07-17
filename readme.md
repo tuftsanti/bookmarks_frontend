@@ -1,13 +1,11 @@
-# Alex Merced's React/Parcel Template
+# Bookmarkd: A Web based bookmarking app with full CRUD
 
-## Directions
+## Andy Riecker and Ian Gallaher
 
-1. Clone this repo
+Frontend on Netlify:
+https://andys-bookmarks.netlify.app/
 
-2. git remote rm origin
+Backend on Heroku:
+https://andysbookmarks.herokuapp.com/bookmarks
 
-3. npm install
-
-4. run dev server with command "npm run dev"
-
-5. build final output with "npm run build"
+We built this simple bookmarking app with React. You can add, edit and delete bookmarks at will. Authentication was built in but disabled for demonstration purposes
