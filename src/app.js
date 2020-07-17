@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './css/style.css'
 import Form from './form.js'
+import 'regenerator-runtime/runtime'
 // import Login from './login.js'
 
 const App = (props) => {
@@ -29,7 +30,7 @@ const getBookmarks = async () => {
     // const response = await fetch('http://localhost:3000/bookmarks') /*, {
     //     headers: { Authorization: `bearer ${token}` }
     // })*/
-    const response = await fetch('https://andysbookmarks.herokuapp.com/bookmarks')
+    const response = await fetch('https://andysbookmarks.herokuapp.com/bookmarks/')
     const result = await response.json()
     console.log(result)
     setBookmark(result)
