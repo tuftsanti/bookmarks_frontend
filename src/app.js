@@ -26,9 +26,10 @@ const blankForm = {
 
 // GET the bookmarks
 const getBookmarks = async () => {
-    const response = await fetch('http://localhost:3000/bookmarks') /*, {
-        headers: { Authorization: `bearer ${token}` }
-    })*/
+    // const response = await fetch('http://localhost:3000/bookmarks') /*, {
+    //     headers: { Authorization: `bearer ${token}` }
+    // })*/
+    const response = await fetch('https://andysbookmarks.herokuapp.com/bookmarks')
     const result = await response.json()
     console.log(result)
     setBookmark(result)
@@ -54,7 +55,13 @@ React.useEffect(() => {
 
 // Creates Bookmark from form
 const createBookmark = async (data) => {
-    const response = await fetch('http://localhost:3000/bookmarks', {
+    // const response = await fetch('http://localhost:3000/bookmarks', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //         /* Authorization: `bearer ${token}`*/
+    //     },
+    const response = await fetch('https://andysbookmarks.herokuapp.com/bookmarks', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -67,7 +74,11 @@ const createBookmark = async (data) => {
 
 // Deletes a bookmark
 const deleteBookmark = async (id) => {
-    const response = await fetch(`http://localhost:3000/bookmarks/${id}`, {
+    // const response = await fetch(`http://localhost:3000/bookmarks/${id}`, {
+    //     method: 'DELETE' /*,
+    //     headers: {Authorization: `bearer ${token}`}*/
+    // })
+    const response = await fetch(`https://andysbookmarks.herokuapp.com/bookmarks/${id}`, {
         method: 'DELETE' /*,
         headers: {Authorization: `bearer ${token}`}*/
     })
@@ -81,7 +92,13 @@ const selectBookmark = async (bookmark) => {
 
 // Edit a bookmark
 const editBookmark = async (data) => {
-    const response = await fetch(`http://localhost:3000/bookmarks/${data._id}`, {
+    // const response = await fetch(`http://localhost:3000/bookmarks/${data._id}`, {
+    //     method: 'PUT',
+    //     headers: {
+    //         'Content-Type': "application/json" /*,
+    //         Authorization: `bearer ${token}` */
+    //     },
+    const response = await fetch(`https://andysbookmarks.herokuapp.com/bookmarks/${data._id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': "application/json" /*,
