@@ -16,6 +16,9 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
     },
+    "browserslist": [
+        "since 2017-06"
+      ],
     "devDependencies": {
         "@babel/core": "^7.9.6",
         "@babel/preset-env": "^7.9.6",
